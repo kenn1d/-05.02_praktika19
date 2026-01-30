@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using WpfApp1.Classes;
 using WpfApp1.Model;
@@ -11,6 +12,7 @@ namespace WpfApp1.Pages.Afisha.Items
     public partial class Item : UserControl
     {
         List<KinoteatrContext> AllKinoteatrs = KinoteatrContext.Select();
+        List<BiletContext> AllBilets = BiletContext.Select();
         AfishaContext item;
         Main main;
 
@@ -34,6 +36,16 @@ namespace WpfApp1.Pages.Afisha.Items
         {
             item.Delete();
             main.parent.Children.Remove(this);
+        }
+
+        private void byRecord(object sender, System.Windows.RoutedEventArgs e)
+        {
+            BiletContext newBilet = new BiletContext(
+                0,
+                item.Id
+                );
+            newBilet.Add();
+            MessageBox.Show("Запись добавлена.");
         }
     }
 }

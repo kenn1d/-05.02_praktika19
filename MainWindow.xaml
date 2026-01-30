@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Click="openKino" Content="Кинотеатр" Height="25" Margin="10,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,70,0,0"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,55,0,0"/>
         <Button Click="openAfisha" Content="Афиша" Height="25" Margin="100,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
+        <Button Click="openBilet" Content="Билеты" Height="25" Margin="190,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
     </Grid>
 </Window>

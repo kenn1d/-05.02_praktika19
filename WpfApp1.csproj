@@ -113,6 +113,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\AfishaContext.cs" />
+    <Compile Include="Classes\BiletContext.cs" />
     <Compile Include="Classes\Common\Connection.cs" />
     <Compile Include="Classes\KinoteatrContext.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -131,6 +132,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Bilet\Items\Item.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Bilet\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Kinoteatr\Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Afisha.cs" />
+    <Compile Include="Model\Bilet.cs" />
     <Compile Include="Model\Kinoteatr.cs" />
     <Compile Include="Pages\Afisha\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
@@ -154,6 +164,12 @@
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Afisha\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Bilet\Items\Item.xaml.cs">
+      <DependentUpon>Item.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Bilet\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Kinoteatr\Add.xaml.cs">
@@ -196,6 +212,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\3d_movies_folder_20527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\free-icon-tickets-320416.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

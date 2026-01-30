@@ -32,5 +32,10 @@ namespace WpfApp1
         {
             OpenPage(new Pages.Afisha.Main());
         }
+
+        private void openBilet(object sender, RoutedEventArgs e)
+        {
+            OpenPage(new Pages.Bilet.Main());
+        }
     }
 }
