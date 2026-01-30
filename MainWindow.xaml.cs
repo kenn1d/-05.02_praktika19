@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using WpfApp1.Classes;
 
 namespace WpfApp1
@@ -8,11 +9,28 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow init;
+
         public MainWindow()
         {
             InitializeComponent();
+            OpenPage(new Pages.Afisha.Main());
+            init = this;
+        }
 
-            new KinoteatrContext(0, "test", 12, 12).Add();
+        public void OpenPage(Page Page)
+        {
+            frame.Navigate(Page);
+        }
+
+        private void openKino(object sender, RoutedEventArgs e)
+        {
+            OpenPage(new Pages.Kinoteatr.Main());
+        }
+
+        private void openAfisha(object sender, RoutedEventArgs e)
+        {
+            OpenPage(new Pages.Afisha.Main());
         }
     }
 }
