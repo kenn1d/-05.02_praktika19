@@ -9,10 +9,7 @@ namespace WpfApp1.Classes
     public class KinoteatrContext : Kinoteatr
     {
         public KinoteatrContext(int Id, string Name, int CountZal, int Count) :
-            base(Id, Name, CountZal, Count)
-        {
-
-        }
+            base(Id, Name, CountZal, Count) { }
 
         public static List<KinoteatrContext> Select()
         {
