@@ -9,11 +9,20 @@
       Title="Main">
 
     <Grid>
-        <ScrollViewer Margin="5,5,5,40">
+        <ScrollViewer Margin="5,65,5,40">
             <StackPanel x:Name="parent">
 
             </StackPanel>
         </ScrollViewer>
+        <Grid x:Name="kinoFilters" Visibility="Visible" Margin="10,10,10,0" VerticalAlignment="Top" Height="50">
+            <Label Content="Наименование" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="kinoName" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Label Content="Кол-во мест" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,0,0,0" FontWeight="Bold"/>
+            <TextBox x:Name="kinoCountZal" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110,0,0,0"/>
+            <Label Content="Кол-во залов" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,0,0,0" FontWeight="Bold"/>
+            <TextBox x:Name="kinoCount" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="220,0,0,0"/>
+            <Button Click="kinoSearch" Content="Поиск" Height="25" Background="#FF5FCFFF" BorderBrush="#FF5FCFFF" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Width="80"/>
+        </Grid>
         <Button Click="AddRecord" Content="Добавить" Margin="0,0,10,10" Background="#FF90FF5F"
                 BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Bottom"
                 HorizontalAlignment="Right" Width="80"/>

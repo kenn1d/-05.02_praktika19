@@ -9,11 +9,22 @@
       Title="Main">
 
     <Grid>
-        <ScrollViewer Margin="5,5,5,40">
+        <ScrollViewer Margin="5,65,5,40">
             <StackPanel x:Name="parent">
 
             </StackPanel>
         </ScrollViewer>
+        <Grid x:Name="afishaFilters" Visibility="Visible" Margin="10,10,10,0" VerticalAlignment="Top" Height="50">
+            <Label Content="Наименование" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="afishaName" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Label Content="Кинотеатр" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,0,0,0" FontWeight="Bold"/>
+            <ComboBox x:Name="afishaKino" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110,0,0,0"/>
+            <Label Content="Стоимость" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,0,0,0" FontWeight="Bold"/>
+            <TextBox x:Name="afishaPrice" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="220,0,0,0"/>
+            <Label Content="Дата" Height="25" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,0,0,0" FontWeight="Bold"/>
+            <DatePicker x:Name="afishaDate" Width="100" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="330,0,0,0"/>
+            <Button Click="afishaSearch" Content="Поиск" Height="25" Background="#FF5FCFFF" BorderBrush="#FF5FCFFF" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Width="80"/>
+        </Grid>
         <Button Click="AddRecord" Content="Добавить" Margin="0,0,10,10" Background="#FF90FF5F"
         BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Bottom"
         HorizontalAlignment="Right" Width="80"/>
